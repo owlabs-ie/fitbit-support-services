@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d052d98a-d9c3-4cf6-8898-ec6b0f02e7c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/DarkSkyConsumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/WeatherConsumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3fc3eb996134a245a64c05db9f3fb6d7b4d9e00f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3fc3eb996134a245a64c05db9f3fb6d7b4d9e00f" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/AppConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/AppConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/OpenWeatherConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/OpenWeatherConsumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/ApiKeyController.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/ApiKeyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/WeatherController.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/WeatherController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/ServiceType.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/ServiceType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/Weather.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/Weather.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/ApiKeyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/ApiKeyRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/ApiKeyService.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/ApiKeyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/WeatherService.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/WeatherService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -110,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="54">
+              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -142,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DarkSkyConsumer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DarkSkyConsumer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/DarkSkyConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -639,9 +623,9 @@
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/WeatherService.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/ApiKeyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/ApiKeyService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/DarkSkyConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/Weather.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -1388,14 +1372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/ApiKeyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1445,6 +1421,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
