@@ -1,5 +1,6 @@
 package es.flaviojmend.fitbittracker.service;
 
+import es.flaviojmend.fitbittracker.consumer.DarkSkyConsumer;
 import es.flaviojmend.fitbittracker.consumer.OpenWeatherConsumer;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
 
@@ -15,9 +16,20 @@ public class WeatherService {
     @Autowired
     private OpenWeatherConsumer openWeatherConsumer;
 
-    @Cacheable(value = "weather", key = "{#latitude, #longitude}")
-    public Weather getWeather(String latitude, String longitude) {
-        return openWeatherConsumer.getWeatherByLatLong(latitude,longitude);
+    @Autowired
+    private DarkSkyConsumer darkSkyConsumer;
+
+    @Cacheable(value = "weather", key = "{#service, #latitude, #longitude}")
+    public Weather getWeather(String service, String latitude, String longitude) {
+        switch(service) {
+            case "owm":
+                return openWeatherConsumer.getWeatherByLatLong(latitude,longitude);
+
+            case "drk":
+                return darkSkyConsumer.getWeatherByLatLong(latitude,longitude);
+
+        }
+        return  openWeatherConsumer.getWeatherByLatLong(latitude,longitude);
     }
 
 

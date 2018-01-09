@@ -1,6 +1,7 @@
 package es.flaviojmend.fitbittracker.consumer;
 
 import com.github.wnameless.json.flattener.JsonFlattener;
+import es.flaviojmend.fitbittracker.persistence.entity.ServiceType;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
 import es.flaviojmend.fitbittracker.service.ApiKeyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 @Component
-public class OpenWeatherConsumer {
+public class OpenWeatherConsumer implements WeatherConsumer {
 
     @Autowired
     private ApiKeyService apiKeyService;
@@ -21,9 +22,8 @@ public class OpenWeatherConsumer {
 
     public Weather getWeatherByLatLong(String latitude, String longitude) {
 
-        String url = ENDPOINT.replace(":lat", latitude).replace(":lon",longitude).replace(":appid", apiKeyService.getRandomKey());
+        String url = ENDPOINT.replace(":lat", latitude).replace(":lon",longitude).replace(":appid", apiKeyService.getRandomKey(ServiceType.OPENWEATHER));
         String object = restTemplate.getForObject(url, String.class);
-
         Map<String, Object> result = JsonFlattener.flattenAsMap(object);
 
         Double tempC =   ((Double.parseDouble(result.get("main.temp").toString()) - 32)*5)/9;

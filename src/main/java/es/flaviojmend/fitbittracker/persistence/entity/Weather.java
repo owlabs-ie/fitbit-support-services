@@ -10,7 +10,9 @@ public class Weather {
     private String latitude;
     private String longitude;
     private String temperatureC;
+    private String apparentTemperatureC;
     private String temperatureF;
+    private String apparentTemperatureF;
     private String location;
     private Boolean isDay;
     private String sunrise;
@@ -81,6 +83,33 @@ public class Weather {
 
     public String getSunset() {
         return sunset;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Weather setId(String id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getApparentTemperatureC() {
+        return apparentTemperatureC;
+    }
+
+    public Weather setApparentTemperatureC(String apparentTemperatureC) {
+        this.apparentTemperatureC = apparentTemperatureC;
+        return this;
+    }
+
+    public String getApparentTemperatureF() {
+        return apparentTemperatureF;
+    }
+
+    public Weather setApparentTemperatureF(String apparentTemperatureF) {
+        this.apparentTemperatureF = apparentTemperatureF;
+        return this;
     }
 
     public Weather setSunset(String sunset) {

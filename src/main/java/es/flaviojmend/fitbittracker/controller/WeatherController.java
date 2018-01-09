@@ -18,8 +18,8 @@ public class WeatherController {
     @Autowired
     private WeatherService weatherService;
 
-    @RequestMapping(method= RequestMethod.GET, value = "/{latitude}/{longitude}")
-    public Weather getWeatherByLatLong(@PathVariable String latitude, @PathVariable String longitude){
-        return weatherService.getWeather(latitude, longitude);
+    @RequestMapping(method= RequestMethod.GET, value = "/{service}/{latitude}/{longitude}")
+    public Weather getWeatherByLatLong(@PathVariable String service, @PathVariable String latitude, @PathVariable String longitude){
+        return weatherService.getWeather(service, latitude, longitude);
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 @Service
@@ -19,21 +20,18 @@ public class ApiKeyService {
         return apiKeyRepository.findAll();
     }
 
-    public void addApiKeys(String apiKeys) {
+    public void addApiKeys(String apiKeys, String service) {
         for(String key:apiKeys.split(",")){
             ApiKey apiKey = new ApiKey();
             apiKey.setKey(key);
-            apiKey.setService(ServiceType.OPENWEATHER);
+            apiKey.setService(ServiceType.valueOf(service));
             apiKeyRepository.save(apiKey);
         }
     }
 
-    public String getRandomKey() {
-        Iterable<ApiKey> keys = apiKeyRepository.findAll();
-        ArrayList<ApiKey> keysList = new ArrayList<>();
-        keys.forEach(keysList::add);
+    public String getRandomKey(ServiceType serviceType) {
+        List<ApiKey> keys = apiKeyRepository.findAllByService(serviceType);
         Random rand = new Random();
-
-        return keysList.get(rand.nextInt(keysList.size())).getKey();
+        return keys.get(rand.nextInt(keys.size())).getKey();
     }
 }

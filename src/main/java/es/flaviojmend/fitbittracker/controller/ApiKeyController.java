@@ -21,9 +21,9 @@ public class ApiKeyController {
         return new ResponseEntity<>(apiKeyService.listApiKeys(), HttpStatus.OK);
     }
 
-    @RequestMapping(method= RequestMethod.POST)
-    public ResponseEntity<?> addApiKeys(@RequestBody String apiKeys){
-        apiKeyService.addApiKeys(apiKeys);
+    @RequestMapping(method= RequestMethod.POST, value = "/{service}")
+    public ResponseEntity<?> addApiKeys(@RequestBody String apiKeys, @PathVariable String service){
+        apiKeyService.addApiKeys(apiKeys, service);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
