@@ -78,6 +78,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/Dockerfile">
           <value>
             <set />
@@ -118,6 +123,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/LocationConsumer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/OpenWeatherConsumer.java">
           <value>
             <set />
@@ -149,6 +159,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/ApiKey.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/Location.java">
           <value>
             <set />
           </value>

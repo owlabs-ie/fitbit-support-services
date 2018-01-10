@@ -1,6 +1,7 @@
 package es.flaviojmend.fitbittracker.consumer;
 
 import com.github.wnameless.json.flattener.JsonFlattener;
+import es.flaviojmend.fitbittracker.persistence.entity.Location;
 import es.flaviojmend.fitbittracker.persistence.entity.ServiceType;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
 import es.flaviojmend.fitbittracker.service.ApiKeyService;
@@ -15,6 +16,9 @@ public class DarkSkyConsumer implements WeatherConsumer {
 
     @Autowired
     private ApiKeyService apiKeyService;
+
+    @Autowired
+    private LocationConsumer locationConsumer;
 
     private RestTemplate restTemplate = new RestTemplate();
 
@@ -34,7 +38,7 @@ public class DarkSkyConsumer implements WeatherConsumer {
         Weather weather = new Weather()
                 .setLatitude(latitude)
                 .setLongitude(longitude)
-                .setLocation("")
+                .setLocation(locationConsumer.getWeatherByLatLong(latitude,longitude).getDescription())
                 .setSunrise(result.get("daily.data[0].sunriseTime").toString())
                 .setSunset(result.get("daily.data[0].sunsetTime").toString())
                 .setTemperatureC(tempC.toString())
