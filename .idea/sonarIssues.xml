@@ -8,6 +8,76 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-account-manager/Gruntfile.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-account-manager/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-authorization-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-aviso-switch-mock/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-balance-inquiry-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-commons-api/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-commons/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-remote-key-injection/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-reporting-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-reversal-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-router/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-settlements-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-withdrawal-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/Dockerfile">
           <value>
             <set />

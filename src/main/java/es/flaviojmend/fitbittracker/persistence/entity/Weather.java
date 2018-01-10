@@ -14,7 +14,6 @@ public class Weather {
     private String temperatureF;
     private String apparentTemperatureF;
     private String location;
-    private Boolean isDay;
     private String sunrise;
     private String sunset;
 
@@ -60,15 +59,6 @@ public class Weather {
 
     public Weather setLocation(String location) {
         this.location = location;
-        return this;
-    }
-
-    public Boolean getDay() {
-        return isDay;
-    }
-
-    public Weather setDay(Boolean day) {
-        isDay = day;
         return this;
     }
 

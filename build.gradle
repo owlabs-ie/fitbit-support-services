@@ -28,6 +28,7 @@ dependencies {
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb')
     compile(group: 'com.github.wnameless', name: 'json-flattener', version: '0.4.1')
     compile("org.springframework.boot:spring-boot-starter-cache")
+    compile("com.github.ben-manes.caffeine:caffeine")
 }
 
 buildscript {

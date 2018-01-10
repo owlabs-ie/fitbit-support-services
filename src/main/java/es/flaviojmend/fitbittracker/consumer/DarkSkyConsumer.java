@@ -18,7 +18,7 @@ public class DarkSkyConsumer implements WeatherConsumer {
 
     private RestTemplate restTemplate = new RestTemplate();
 
-    private static final String ENDPOINT = "https://api.darksky.net/forecast/:appid/:lat,:lon?exclude=minutely,hourly,daily,alerts,flags";
+    private static final String ENDPOINT = "https://api.darksky.net/forecast/:appid/:lat,:lon?exclude=minutely,hourly,alerts,flags";
 
 
 
@@ -35,8 +35,8 @@ public class DarkSkyConsumer implements WeatherConsumer {
                 .setLatitude(latitude)
                 .setLongitude(longitude)
                 .setLocation("")
-                .setSunrise("")
-                .setSunset("")
+                .setSunrise(result.get("daily.data[0].sunriseTime").toString())
+                .setSunset(result.get("daily.data[0].sunsetTime").toString())
                 .setTemperatureC(tempC.toString())
                 .setApparentTemperatureC(apparentTempC.toString())
                 .setTemperatureF(result.get("currently.temperature").toString())
