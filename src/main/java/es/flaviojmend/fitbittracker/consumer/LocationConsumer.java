@@ -21,8 +21,23 @@ public class LocationConsumer {
 
         return new Location().setLatitude(latitude)
                             .setLongitude(longitude)
-                            .setDescription(result.get("address.city").toString());
+                            .setDescription(getLocationDescription(result));
 
+    }
+
+    private String getLocationDescription(Map<String, Object> map) {
+        if (map.get("address.hamlet") != null) {
+            return map.get("address.hamlet").toString();
+        } else if(map.get("address.village") != null) {
+            return map.get("address.village").toString();
+        } else if(map.get("address.city_district") != null) {
+            return map.get("address.city_district").toString();
+        } else if(map.get("address.town") != null) {
+            return map.get("address.town").toString();
+        } else if(map.get("address.city") != null) {
+            return map.get("address.city").toString();
+        }
+        return "";
     }
 
 }
