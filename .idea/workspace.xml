@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d052d98a-d9c3-4cf6-8898-ec6b0f02e7c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/WeatherRequestRepository.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/es/flaviojmend/fitbittracker/controller/WeatherController.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75b793ea17449b5b1857c4ad2e9c5832c6e6adc4" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75b793ea17449b5b1857c4ad2e9c5832c6e6adc4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c782678d8378579bc78cf8b4b077ee1d5021c30" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c782678d8378579bc78cf8b4b077ee1d5021c30" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd7c047d4947ecc760f037d8de3624543a946c47" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd7c047d4947ecc760f037d8de3624543a946c47" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c370834e2ca9c562315ada47b551719ccd520391" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c370834e2ca9c562315ada47b551719ccd520391" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/AppConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/AppConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/WeatherController.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/WeatherController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/WeatherService.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/WeatherService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -107,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="126">
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -149,7 +136,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppConfiguration.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/AppConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -629,10 +616,10 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/WeatherRequestRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/WeatherController.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/WeatherService.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/AppConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -1358,14 +1345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/DarkSkyConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1426,6 +1405,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
