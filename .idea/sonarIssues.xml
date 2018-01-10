@@ -168,6 +168,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/ApiKeyRepository.java">
           <value>
             <set />
@@ -179,6 +184,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/UserRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/repo/WeatherRequestRepository.java">
           <value>
             <set />
           </value>
