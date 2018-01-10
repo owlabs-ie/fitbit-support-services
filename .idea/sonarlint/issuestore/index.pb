@@ -49,3 +49,7 @@ Hsrc/main/java/es/flaviojmend/fitbittracker/consumer/DarkSkyConsumer.java,9/f/9
 Qsrc/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequest.java,c/8/c8a1ac036b6bf34ca82ed9cd7df11b5b57c50672
 ‰
 Ysrc/main/java/es/flaviojmend/fitbittracker/persistence/repo/WeatherRequestRepository.java,4/e/4e8c389dff4c0dbb8fe073377275c30724ec1bf5
+{
+Ksrc/main/java/es/flaviojmend/fitbittracker/persistence/entity/Location.java,8/1/81861c2669e0e19c9b007b6b383465ea6ac6dd93
+y
+Isrc/main/java/es/flaviojmend/fitbittracker/consumer/LocationConsumer.java,9/4/948ab7549b33e74d1362f45e9db5acfeea68e6d9
