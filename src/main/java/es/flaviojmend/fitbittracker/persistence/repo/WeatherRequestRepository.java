@@ -11,5 +11,6 @@ public interface WeatherRequestRepository extends CrudRepository<WeatherRequest,
 
 
     public List<WeatherRequest> findAllByService(ServiceType service);
+    public List<WeatherRequest> findAllByApp(String app);
 
 }

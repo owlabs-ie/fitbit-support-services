@@ -68,6 +68,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-reversal-service/src/test/java/com/fexco/eds/reversal/routing/ReversalTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-router/pom.xml">
           <value>
             <set />
@@ -168,6 +173,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/WeatherRequestController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/controller/WeatherRequestrController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/ApiKey.java">
           <value>
             <set />
@@ -194,6 +209,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequestStats.java">
           <value>
             <set />
           </value>
@@ -229,6 +249,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/TrackerService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/service/WeatherRequestService.java">
           <value>
             <set />
           </value>

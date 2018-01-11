@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static junit.framework.TestCase.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -26,6 +27,8 @@ public class ApiKeyServiceTest {
         assertNotNull(apiKey);
 
         apiKeyService.removeApiKey(API_KEY);
+        ApiKey apiKeyRemoved = apiKeyService.getKey(API_KEY);
+        assertNull(apiKeyRemoved);
     }
 
 }

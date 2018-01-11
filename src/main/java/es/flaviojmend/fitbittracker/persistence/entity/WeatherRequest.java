@@ -15,7 +15,17 @@ public class WeatherRequest {
     private String longitude;
     private ServiceType service;
     private Date requestDate;
+    private String app;
 
+
+    public String getApp() {
+        return app;
+    }
+
+    public WeatherRequest setApp(String app) {
+        this.app = app;
+        return this;
+    }
 
     public String getId() {
         return id;

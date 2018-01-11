@@ -33,11 +33,11 @@ public class WeatherService {
     private DarkSkyConsumer darkSkyConsumer;
 
     @Autowired
-    private WeatherRequestRepository weatherRequestRepository;
+    private WeatherRequestService weatherRequestService;
 
     @Cacheable(value = "weather", key = "{#service, #latitude, #longitude}")
-    public Weather getWeather(String service, String latitude, String longitude) throws ExecutionException, InterruptedException {
-        saveRequest(service,latitude,longitude);
+    public Weather getWeather(String service, String latitude, String longitude, String app) throws ExecutionException, InterruptedException {
+        weatherRequestService.saveRequest(service,latitude,longitude,app);
         logger.info("Retrieving " + service);
         switch(service) {
             case "OPENWEATHER":
@@ -50,16 +50,7 @@ public class WeatherService {
         return  openWeatherConsumer.getWeatherByLatLong(latitude,longitude);
     }
 
-    private void saveRequest(String service, String latitude, String longitude) {
-        WeatherRequest weatherRequest = new WeatherRequest()
-                .setLatitude(latitude)
-                .setLongitude(longitude)
-                .setRequestDate(new Date())
-                .setService(ServiceType.valueOf(service));
 
-        weatherRequestRepository.save(weatherRequest);
-        logger.info("Saved weather request for service " + service);
-    }
 
 
 
