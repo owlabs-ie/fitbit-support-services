@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/Jenkinsfile">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-account-manager/Gruntfile.js">
           <value>
             <set />
@@ -244,6 +249,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/es/flaviojmend/fitbittracker/consumer/DarkSkyConsumerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/es/flaviojmend/fitbittracker/consumer/OpenWeatherConsumerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/es/flaviojmend/fitbittracker/service/ApiKeyServiceTest.java">
           <value>
             <set />
           </value>

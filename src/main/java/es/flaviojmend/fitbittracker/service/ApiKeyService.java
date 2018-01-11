@@ -6,7 +6,6 @@ import es.flaviojmend.fitbittracker.persistence.repo.ApiKeyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -29,9 +28,17 @@ public class ApiKeyService {
         }
     }
 
+    public ApiKey getKey(String apiKey) {
+        return apiKeyRepository.findOne(apiKey);
+    }
+
     public String getRandomKey(ServiceType serviceType) {
         List<ApiKey> keys = apiKeyRepository.findAllByService(serviceType);
         Random rand = new Random();
         return keys.get(rand.nextInt(keys.size())).getKey();
+    }
+
+    public void removeApiKey(String id) {
+        apiKeyRepository.delete(id);
     }
 }
