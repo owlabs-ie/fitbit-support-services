@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 @Component
-public class DarkSkyConsumer implements WeatherConsumer {
+public class DarkSkyConsumer extends WeatherConsumer {
 
     @Autowired
     private ApiKeyService apiKeyService;

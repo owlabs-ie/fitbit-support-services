@@ -7,6 +7,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'docker'
+apply plugin: 'jacoco'
 
 jar {
     baseName = 'fitbit-tracker'
@@ -31,6 +32,31 @@ dependencies {
     compile("com.github.ben-manes.caffeine:caffeine")
 }
 
+subprojects {
+
+    test.useTestNG()
+}
+
+task codeCoverageReport(type: JacocoReport) {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+    subprojects.each {
+        sourceSets it.sourceSets.main
+    }
+
+    reports {
+        xml.enabled true
+        xml.destination "${buildDir}/reports/jacoco/report.xml"
+        html.enabled false
+        csv.enabled false
+    }
+}
+
+codeCoverageReport.dependsOn {
+    subprojects*.test
+}
+
+
 buildscript {
     repositories {
         mavenCentral()
@@ -52,3 +78,4 @@ task buildDocker(type: Docker, dependsOn: build) {
         }
     }
 }
+
