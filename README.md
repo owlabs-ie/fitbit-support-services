@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/flaviojmendes/fitbit-support-services.svg?branch=master)](https://travis-ci.org/flaviojmendes/fitbit-support-services)
+
 ## Fitbit Support Services
 
 This service works in order to make easier the life of a Fitbit Developer.
