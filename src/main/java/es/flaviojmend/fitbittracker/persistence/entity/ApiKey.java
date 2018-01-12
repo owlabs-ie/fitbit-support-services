@@ -10,19 +10,22 @@ public class ApiKey {
     private String key;
     private ServiceType service;
 
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
-
     public ServiceType getService() {
         return service;
     }
 
-    public void setService(ServiceType service) {
+    public ApiKey setService(ServiceType service) {
         this.service = service;
+        return this;
+    }
+
+    public String getKey() {
+
+        return key;
+    }
+
+    public ApiKey setKey(String key) {
+        this.key = key;
+        return this;
     }
 }

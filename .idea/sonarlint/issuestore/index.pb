@@ -53,3 +53,17 @@ Ysrc/main/java/es/flaviojmend/fitbittracker/persistence/repo/WeatherRequestRepos
 Ksrc/main/java/es/flaviojmend/fitbittracker/persistence/entity/Location.java,8/1/81861c2669e0e19c9b007b6b383465ea6ac6dd93
 y
 Isrc/main/java/es/flaviojmend/fitbittracker/consumer/LocationConsumer.java,9/4/948ab7549b33e74d1362f45e9db5acfeea68e6d9
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+€
+Psrc/test/java/es/flaviojmend/fitbittracker/consumer/OpenWeatherConsumerTest.java,d/5/d5649575092f2475639210db3b60e79553c91e3c
+|
+Lsrc/test/java/es/flaviojmend/fitbittracker/consumer/DarkSkyConsumerTest.java,1/b/1bd4343d3d70cd81d6f18c6f8c348dd424c1e19e
+y
+Isrc/test/java/es/flaviojmend/fitbittracker/service/ApiKeyServiceTest.java,8/e/8ef6df71bba1d0148009c7f56130d64e473ab5fd
+†
+Vsrc/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequestStats.java,3/f/3fcc9053d90b3f490973d772002087058c91869b
+}
+Msrc/main/java/es/flaviojmend/fitbittracker/service/WeatherRequestService.java,3/0/30768a7e78ad1ee249d2e109a2f66adfc1373f87
+ƒ
+Ssrc/main/java/es/flaviojmend/fitbittracker/controller/WeatherRequestController.java,8/d/8dc25e458beea3644f5612f589cfb70c5c23d175

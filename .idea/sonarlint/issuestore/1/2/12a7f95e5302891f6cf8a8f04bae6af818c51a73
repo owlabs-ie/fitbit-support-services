@@ -1,2 +1,3 @@
 
-{squid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "weather".(ó Ñ±8§ºÖµ,
+nsquid:UselessImportCheck"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8¼Ñ°®,
+isquid:UselessImportCheck"@Remove this unused import 'javax.swing.text.html.parser.Entity'.(Û‡Ğ‘8ãÏ®,
