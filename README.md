@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/flaviojmendes/fitbit-support-services.svg?branch=master)](https://travis-ci.org/flaviojmendes/fitbit-support-services)
+[![Code Climate](https://codeclimate.com/github/flaviojmendes/fitbit-support-services/badges/gpa.svg)](https://codeclimate.com/github/flaviojmendes/fitbit-support-services)
 
 ## Fitbit Support Services
 
