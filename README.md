@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/flaviojmendes/fitbit-support-services.svg?branch=master)](https://travis-ci.org/flaviojmendes/fitbit-support-services)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b930af797dd812d9b2b5/maintainability)](https://codeclimate.com/github/flaviojmendes/fitbit-support-services/maintainability)
+
 ## Fitbit Support Services
 
 This service works in order to make easier the life of a Fitbit Developer.
