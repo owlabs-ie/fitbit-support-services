@@ -1,14 +1,14 @@
 
-Xsquid:S2629"7Use the built-in formatting to construct this argument.(¢¹¸Òûÿÿÿÿ8¥ó¤ÿ,
-Tsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8™´’°,
-{squid:UselessImportCheck"RRemove this unused import 'org.springframework.scheduling.annotation.AsyncResult'.(ôï™¦8Åö¿ÿ,
 Z"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(šÆ‹¬ûÿÿÿÿ8¥ó¤ÿ,
-zsquid:UselessImportCheck"LRemove this unused import 'org.springframework.scheduling.annotation.Async'.(İë€Ûúÿÿÿÿ8¨Áÿ,
-†squid:UselessImportCheck"XRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.ServiceType'.(šñ¨»şÿÿÿÿ8™´’°,
 fsquid:UselessImportCheck"8Remove this unused import 'java.util.concurrent.Future'.(á¬øíıÿÿÿÿ8¨Áÿ,
 ‘squid:UselessImportCheck"cRemove this unused import 'es.flaviojmend.fitbittracker.persistence.repo.WeatherRequestRepository'.(®ñ‹¾ùÿÿÿÿ8‡İ“°,
-‰squid:UselessImportCheck"[Remove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.WeatherRequest'.(”ÿÌøúÿÿÿÿ8™´’°,
-^squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8¥ó¤ÿ,
-lsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(šÆ‹¬ûÿÿÿÿ8¥ó¤ÿ,
-·%squid:RedundantThrowsDeclarationCheck"€Remove the declaration of thrown exception 'java.util.concurrent.ExecutionException', as it cannot be thrown from method's body.(•µÄƒ8Á°,
 ­%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(•µÄƒ8Á°,
+zsquid:UselessImportCheck"LRemove this unused import 'org.springframework.scheduling.annotation.Async'.(İë€Ûúÿÿÿÿ8¨Áÿ,
+Tsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8™´’°,
+{squid:UselessImportCheck"RRemove this unused import 'org.springframework.scheduling.annotation.AsyncResult'.(ôï™¦8Åö¿ÿ,
+†squid:UselessImportCheck"XRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.ServiceType'.(šñ¨»şÿÿÿÿ8™´’°,
+Xsquid:S2629"7Use the built-in formatting to construct this argument.(¢¹¸Òûÿÿÿÿ8¥ó¤ÿ,
+lsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(šÆ‹¬ûÿÿÿÿ8¥ó¤ÿ,
+‰squid:UselessImportCheck"[Remove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.WeatherRequest'.(”ÿÌøúÿÿÿÿ8™´’°,
+·%squid:RedundantThrowsDeclarationCheck"€Remove the declaration of thrown exception 'java.util.concurrent.ExecutionException', as it cannot be thrown from method's body.(•µÄƒ8Á°,
+^squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8¥ó¤ÿ,

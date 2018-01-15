@@ -67,3 +67,7 @@ Vsrc/main/java/es/flaviojmend/fitbittracker/persistence/entity/WeatherRequestSta
 Msrc/main/java/es/flaviojmend/fitbittracker/service/WeatherRequestService.java,3/0/30768a7e78ad1ee249d2e109a2f66adfc1373f87
 ƒ
 Ssrc/main/java/es/flaviojmend/fitbittracker/controller/WeatherRequestController.java,8/d/8dc25e458beea3644f5612f589cfb70c5c23d175
+;
+.travis.yml,d/e/dea01dd89a3b602828e630677fde5d77c06441c8
+9
+	deploy.sh,b/e/be94fd40f0c4b440044c3f852e44fd2a75f7b3cc

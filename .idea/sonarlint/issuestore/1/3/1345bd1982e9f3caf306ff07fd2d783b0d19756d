@@ -1,8 +1,8 @@
 
-^squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8×’Äµ,
+bsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ø—µÿ,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æì­ñ8”ô¹ÿ,
 Bsquid:S1452"&Remove usage of generic wildcard type.(•Ùïú8ŞÃ¶ÿ,
-zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(äÿ—‚úÿÿÿÿ8ãĞ·ÿ,
 `squid:S2147"DCombine this catch with the one at line 25, which has the same body.(ä ¹€8Ø—µÿ,
 usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æì­ñ8”ô¹ÿ,
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æì­ñ8”ô¹ÿ,
-bsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ø—µÿ,
+^squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8×’Äµ,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(äÿ—‚úÿÿÿÿ8ãĞ·ÿ,

@@ -1,4 +1,6 @@
 #!/bin/bash
+
+cd /home/user/fitbit/fitbit-support-services
 echo "Updating Git.."
 git pull origin master
 echo "Building App.."

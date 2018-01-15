@@ -53,6 +53,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/src/main/java/com/fexco/eds/receipt/routing/ReceiptingRouteBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/src/main/java/com/fexco/eds/receipt/service/ReceiptPdfGenerator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/src/main/java/com/fexco/eds/receipt/service/WithdrawalReceiptProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/src/test/java/com/fexco/eds/receipt/service/ReceiptPdfGeneratorTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-remote-key-injection/pom.xml">
           <value>
             <set />
@@ -109,6 +129,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/deploy.sh">
           <value>
             <set />
           </value>
