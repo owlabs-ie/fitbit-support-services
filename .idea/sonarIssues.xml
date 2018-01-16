@@ -68,6 +68,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/src/test/java/com/fexco/eds/receipt/routing/RouteManagerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/src/test/java/com/fexco/eds/receipt/service/ReceiptPdfGeneratorTest.java">
           <value>
             <set />

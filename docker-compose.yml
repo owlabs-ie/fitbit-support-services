@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
 
   # Java App with Mongo DB
@@ -13,8 +13,11 @@ services:
       depends_on:
         - db
       image: es.flaviojmend/fitbit-tracker:1.0.0
+      volumes:
+        - "/etc/ssl/certs:/etc/ssl/certs:ro"
       links:
         - db
       ports:
         - "80:80"
+        - "8443:8443"
       restart: always
