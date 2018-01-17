@@ -5,7 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12a7f95e5302891f6cf8a8f04bae6af818c51a73" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12a7f95e5302891f6cf8a8f04bae6af818c51a73" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/1345bd1982e9f3caf306ff07fd2d783b0d19756d" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/1345bd1982e9f3caf306ff07fd2d783b0d19756d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75b793ea17449b5b1857c4ad2e9c5832c6e6adc4" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75b793ea17449b5b1857c4ad2e9c5832c6e6adc4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8c4a41765a49f21a980b172dccedf016f6102060" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8c4a41765a49f21a980b172dccedf016f6102060" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/948ab7549b33e74d1362f45e9db5acfeea68e6d9" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/948ab7549b33e74d1362f45e9db5acfeea68e6d9" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c370834e2ca9c562315ada47b551719ccd520391" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c370834e2ca9c562315ada47b551719ccd520391" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/LocationConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/LocationConsumer.java" />
@@ -54,8 +54,8 @@
       <file leaf-file-name="LocationConsumer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/LocationConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+            <state relative-caret-position="252">
+              <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -118,7 +118,7 @@
       <file leaf-file-name="EPollArrayWrapper.class" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/java-8-oracle/jre/lib/rt.jar!/sun/nio/ch/EPollArrayWrapper.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
+            <state relative-caret-position="3690">
               <caret line="221" column="7" lean-forward="false" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
               <folding />
             </state>
@@ -666,9 +666,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -776,6 +775,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1524,7 +1524,7 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/jre/lib/rt.jar!/sun/nio/ch/EPollArrayWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
+        <state relative-caret-position="3690">
           <caret line="221" column="7" lean-forward="false" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
           <folding />
         </state>
@@ -1532,8 +1532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/flaviojmend/fitbittracker/consumer/LocationConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        <state relative-caret-position="252">
+          <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
           <folding />
         </state>
       </provider>
