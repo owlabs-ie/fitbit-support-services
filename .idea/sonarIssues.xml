@@ -78,6 +78,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-receipt-service/src/test/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/dev/eds/eds-services-emv/eds-remote-key-injection/pom.xml">
           <value>
             <set />

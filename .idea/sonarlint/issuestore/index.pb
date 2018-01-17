@@ -71,3 +71,6 @@ Ssrc/main/java/es/flaviojmend/fitbittracker/controller/WeatherRequestController.
 .travis.yml,d/e/dea01dd89a3b602828e630677fde5d77c06441c8
 9
 	deploy.sh,b/e/be94fd40f0c4b440044c3f852e44fd2a75f7b3cc
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
