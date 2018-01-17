@@ -16,6 +16,26 @@ public class Weather {
     private String location;
     private String sunrise;
     private String sunset;
+    private String humidity;
+    private String precipitation;
+
+    public String getHumidity() {
+        return humidity;
+    }
+
+    public Weather setHumidity(String humidity) {
+        this.humidity = humidity;
+        return this;
+    }
+
+    public String getPrecipitation() {
+        return precipitation;
+    }
+
+    public Weather setPrecipitation(String precipitation) {
+        this.precipitation = precipitation;
+        return this;
+    }
 
     public String getLatitude() {
         return latitude;

@@ -54,7 +54,8 @@ public class OpenWeatherConsumer implements WeatherConsumer {
                 .setSunrise(result.get("sys.sunrise").toString())
                 .setSunset(result.get("sys.sunset").toString())
                 .setTemperatureC(tempC.toString())
-                .setTemperatureF(result.get("main.temp").toString());
+                .setTemperatureF(result.get("main.temp").toString())
+                .setHumidity(result.get("main.humidity").toString());
     }
 
 }

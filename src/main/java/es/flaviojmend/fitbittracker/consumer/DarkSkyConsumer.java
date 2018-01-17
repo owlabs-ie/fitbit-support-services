@@ -58,7 +58,9 @@ public class DarkSkyConsumer implements WeatherConsumer {
                 .setTemperatureC(tempC.toString())
                 .setApparentTemperatureC(apparentTempC.toString())
                 .setTemperatureF(result.get("currently.temperature").toString())
-                .setApparentTemperatureF(result.get("currently.apparentTemperature").toString());
+                .setApparentTemperatureF(result.get("currently.apparentTemperature").toString())
+                .setHumidity(result.get("currently.humidity").toString())
+                .setPrecipitation(result.get("currently.precipProbability").toString());
     }
 
 }
