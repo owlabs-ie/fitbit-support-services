@@ -42,6 +42,7 @@ public class AppConfiguration {
         return tomcat;
     }
 
+
     private Connector initiateHttpConnector() {
         Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
         connector.setScheme("http");
