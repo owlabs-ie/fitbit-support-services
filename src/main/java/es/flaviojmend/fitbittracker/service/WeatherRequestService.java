@@ -9,6 +9,7 @@ import es.flaviojmend.fitbittracker.persistence.repo.WeatherRequestRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -23,6 +24,7 @@ public class WeatherRequestService {
     @Autowired
     private LocationConsumer locationConsumer;
 
+    @Async
     public void saveRequest(String service, String latitude, String longitude, String app) {
         Location location = locationConsumer.getWeatherByLatLong(latitude, longitude);
 

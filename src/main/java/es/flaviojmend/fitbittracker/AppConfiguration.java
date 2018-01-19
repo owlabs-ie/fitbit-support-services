@@ -22,6 +22,7 @@ import java.util.concurrent.Executor;
 @PropertySource(Constants.Properties)
 @Configuration
 @EnableCaching
+@EnableAsync
 public class AppConfiguration {
 
     @Bean
