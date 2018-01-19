@@ -16,14 +16,19 @@ public class LocationConsumer {
 
     public Location getWeatherByLatLong(String latitude, String longitude) {
         String url = ENDPOINT.replace(":lat", latitude).replace(":lon",longitude);
-        String object = restTemplate.getForObject(url, String.class);
-        Map<String, Object> result = JsonFlattener.flattenAsMap(object);
+        try {
+            String object = restTemplate.getForObject(url, String.class);
+            Map<String, Object> result = JsonFlattener.flattenAsMap(object);
 
-        return new Location().setLatitude(latitude)
-                            .setLongitude(longitude)
-                            .setCountry(result.get("address.country") != null ? result.get("address.country").toString() : "Unknown")
-                            .setDescription(getLocationDescription(result));
-
+            return new Location().setLatitude(latitude)
+                    .setLongitude(longitude)
+                    .setCountry(result.get("address.country") != null ? result.get("address.country").toString() : "Unknown")
+                    .setDescription(getLocationDescription(result));
+        } catch (Exception e) {
+            return new Location().setLatitude(latitude)
+                    .setLongitude(longitude)
+                    .setCountry("Unknown");
+        }
     }
 
     private String getLocationDescription(Map<String, Object> map) {
