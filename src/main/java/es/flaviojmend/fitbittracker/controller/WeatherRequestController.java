@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 @RestController
@@ -23,6 +24,12 @@ public class WeatherRequestController {
     @RequestMapping(method= RequestMethod.GET, value = "/{app}")
     public ResponseEntity<?> getAppRequests(@PathVariable String app){
         return new ResponseEntity<WeatherRequestStats>(weatherRequestServiceService.getWeatherRequestsStats(app), HttpStatus.OK);
+
+    }
+
+    @RequestMapping(method= RequestMethod.GET, value = "/locations/{app}")
+    public ResponseEntity<?> getLocationAppRequests(@PathVariable String app){
+        return new ResponseEntity<Map<String, Integer>>(weatherRequestServiceService.getLocationWeatherRequestsStats(app), HttpStatus.OK);
 
     }
 

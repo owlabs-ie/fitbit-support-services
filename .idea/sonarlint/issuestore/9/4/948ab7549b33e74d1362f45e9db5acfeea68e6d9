@@ -1,4 +1,2 @@
 
 †squid:UselessImportCheck"XRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.ServiceType'.(šñ¨»şÿÿÿÿ8ƒ§Á„,
-wsquid:S1192"VDefine a constant instead of duplicating this literal "address.city_district" 4 times.(Ïå³øøÿÿÿÿ8ŸÕ¡,
-¦squid:S1862"„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(Ïå³øøÿÿÿÿ8ŸÕ¡,
