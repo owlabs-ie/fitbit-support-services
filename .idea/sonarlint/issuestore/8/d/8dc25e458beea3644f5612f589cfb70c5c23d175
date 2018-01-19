@@ -1,8 +1,10 @@
 
+Bsquid:S1452"&Remove usage of generic wildcard type.(İ‹²°8’ªÛö,
+xsquid:UselessImportCheck"PRemove this unused import 'es.flaviojmend.fitbittracker.service.WeatherService'.(¢É¥J8Ûñ¡°,
+}squid:UselessImportCheck"TRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.Weather'.(Ø»ıÆ8šÅ§°,
 msquid:UselessImportCheck"DRemove this unused import 'java.util.concurrent.ExecutionException'.(¡£ØÍ8šÅ§°,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰Ãèé8’ªÛö,
 @squid:S1452"&Remove usage of generic wildcard type.(ù¨ÙÎıÿÿÿÿ
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(±Ñ¹ã
 ‰squid:UselessImportCheck"[Remove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.WeatherRequest'.(”ÿÌøúÿÿÿÿ8Æ«°,
 Ysquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Æ«°,
-}squid:UselessImportCheck"TRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.Weather'.(Ø»ıÆ8šÅ§°,
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(±Ñ¹ã
-xsquid:UselessImportCheck"PRemove this unused import 'es.flaviojmend.fitbittracker.service.WeatherService'.(¢É¥J8Ûñ¡°,

@@ -1,6 +1,6 @@
 
 Gsquid:S1452"&Remove usage of generic wildcard type.(»õ½Ÿûÿÿÿÿ8ñ¬ÄÑ,
-}squid:UselessImportCheck"TRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.Weather'.(Ø»ıÆ8°™«Ñ,
 squid:UselessImportCheck"SRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.ApiKey'.(øÄ²‡øÿÿÿÿ8ñ¬ÄÑ,
+}squid:UselessImportCheck"TRemove this unused import 'es.flaviojmend.fitbittracker.persistence.entity.Weather'.(Ø»ıÆ8°™«Ñ,
 Gsquid:S1452"&Remove usage of generic wildcard type.(Ş›€‡üÿÿÿÿ8ûËÃÑ,
 xsquid:UselessImportCheck"PRemove this unused import 'es.flaviojmend.fitbittracker.service.WeatherService'.(¢É¥J8Ô±¨Ñ,
