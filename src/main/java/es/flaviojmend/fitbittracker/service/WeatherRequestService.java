@@ -53,13 +53,18 @@ public class WeatherRequestService {
         Map<String, Integer> locations = new TreeMap<>();
 
         weatherRequests.forEach(wr -> {
-            if(locations.get(wr.getLocation()) != null) {
-                locations.put(wr.getLocation(), locations.get(wr.getLocation()) +1);
+            if(locations.get(handleLocation(wr.getLocation())) != null) {
+                locations.put(handleLocation(wr.getLocation()), locations.get(handleLocation(wr.getLocation())) +1);
             } else {
-                locations.put(wr.getLocation(), 1);
+                locations.put(handleLocation(wr.getLocation()), 1);
             }
         });
 
         return locations;
+    }
+
+    private String handleLocation(String location) {
+        return location != null ? location : "Unknown";
+
     }
 }
