@@ -10,6 +10,16 @@ public class Location {
     private String latitude;
     private String longitude;
     private String description;
+    private String country;
+
+    public String getCountry() {
+        return country;
+    }
+
+    public Location setCountry(String country) {
+        this.country = country;
+        return this;
+    }
 
     public String getId() {
         return id;

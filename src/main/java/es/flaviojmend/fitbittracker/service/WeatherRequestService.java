@@ -51,8 +51,10 @@ public class WeatherRequestService {
 
         weatherRequests.forEach(wr -> {
             Location location = locationConsumer.getWeatherByLatLong(wr.getLatitude(), wr.getLongitude());
-            if(locations.get(location.getDescription()) != null) {
-                locations.put(location.getDescription(), locations.get(location.getDescription()) +1);
+            if(locations.get(location.getCountry() + " - " + location.getDescription()) != null) {
+                locations.put(location.getCountry() + " - " + location.getDescription(), locations.get(location.getCountry() + " - " + location.getDescription()) +1);
+            } else {
+                locations.put(location.getCountry() + " - " + location.getDescription(), 1);
             }
         });
 

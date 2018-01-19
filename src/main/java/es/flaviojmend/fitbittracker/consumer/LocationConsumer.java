@@ -21,6 +21,7 @@ public class LocationConsumer {
 
         return new Location().setLatitude(latitude)
                             .setLongitude(longitude)
+                            .setCountry(result.get("address.country").toString())
                             .setDescription(getLocationDescription(result));
 
     }
