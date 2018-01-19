@@ -24,9 +24,12 @@ public class WeatherRequestService {
     private LocationConsumer locationConsumer;
 
     public void saveRequest(String service, String latitude, String longitude, String app) {
+        Location location = locationConsumer.getWeatherByLatLong(latitude, longitude);
+
         WeatherRequest weatherRequest = new WeatherRequest()
                 .setLatitude(latitude)
                 .setLongitude(longitude)
+                .setLocation(location.getCountry() + " - " + location.getDescription())
                 .setRequestDate(new Date())
                 .setService(ServiceType.valueOf(service))
                 .setApp(app != null && !app.equals("") ? app : "UNKNOWN");
@@ -50,11 +53,10 @@ public class WeatherRequestService {
         Map<String, Integer> locations = new TreeMap<>();
 
         weatherRequests.forEach(wr -> {
-            Location location = locationConsumer.getWeatherByLatLong(wr.getLatitude(), wr.getLongitude());
-            if(locations.get(location.getCountry() + " - " + location.getDescription()) != null) {
-                locations.put(location.getCountry() + " - " + location.getDescription(), locations.get(location.getCountry() + " - " + location.getDescription()) +1);
+            if(locations.get(wr.getLocation()) != null) {
+                locations.put(wr.getLocation(), locations.get(wr.getLocation()) +1);
             } else {
-                locations.put(location.getCountry() + " - " + location.getDescription(), 1);
+                locations.put(wr.getLocation(), 1);
             }
         });
 

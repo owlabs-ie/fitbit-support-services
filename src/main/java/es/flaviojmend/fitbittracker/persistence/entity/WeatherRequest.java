@@ -13,10 +13,19 @@ public class WeatherRequest {
     private String id;
     private String latitude;
     private String longitude;
+    private String location;
     private ServiceType service;
     private Date requestDate;
     private String app;
 
+    public String getLocation() {
+        return location;
+    }
+
+    public WeatherRequest setLocation(String location) {
+        this.location = location;
+        return this;
+    }
 
     public String getApp() {
         return app;
