@@ -26,18 +26,20 @@ public class OpenWeatherConsumer implements WeatherConsumer {
 
     private Logger logger = Logger.getLogger(this.toString());
 
-    private static final String ENDPOINT = "http://api.openweathermap.org/data/2.5/weather?units=imperial&lat=:lat&lon=:lon&appid=:appid";
+    private static final String ENDPOINT = "http://api.openweathermap.org/data/2.5/weather?units=imperial&lat={latitude}&lon={longitude}&appid={appid}";
 
     public Weather getWeatherByLatLong(String latitude, String longitude) {
 
-        String url = ENDPOINT.replace(":lat", latitude).replace(":lon",longitude).replace(":appid", apiKeyService.getRandomKey(ServiceType.OPENWEATHER));
-
         try {
-            ResponseEntity<String> responseEntity = restTemplate.getForEntity(url, String.class);
+
+            ResponseEntity<String> responseEntity = restTemplate.getForEntity(ENDPOINT, String.class, latitude, longitude, apiKeyService.getRandomKey(ServiceType.OPENWEATHER));
             return handleWeatherResponse(latitude, longitude, responseEntity);
-        } catch(HttpClientErrorException e) {
+
+        } catch (HttpClientErrorException e) {
+
             logger.warning("Error retrieving Weather: " + e.getStatusCode() + " - " + e.getResponseBodyAsString());
             return getWeatherByLatLong(latitude, longitude);
+
         }
 
     }

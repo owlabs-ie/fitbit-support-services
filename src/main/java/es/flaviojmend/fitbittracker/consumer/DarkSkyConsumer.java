@@ -25,18 +25,17 @@ public class DarkSkyConsumer implements WeatherConsumer {
 
     private RestTemplate restTemplate = new RestTemplate();
 
-    private static final String ENDPOINT = "https://api.darksky.net/forecast/:appid/:lat,:lon?exclude=minutely,hourly,alerts,flags";
-    private Logger logger = Logger.getLogger(this.toString());
+    private static final String ENDPOINT = "https://api.darksky.net/forecast/{appid}/{latitude},{longitude}?exclude=minutely,hourly,alerts,flags";
 
+    private Logger logger = Logger.getLogger(this.toString());
 
     @Override
     public Weather getWeatherByLatLong(String latitude, String longitude) {
-        String url = ENDPOINT.replace(":lat", latitude).replace(":lon",longitude).replace(":appid", apiKeyService.getRandomKey(ServiceType.DARKSKY));
 
         try {
-            ResponseEntity<String> responseEntity = restTemplate.getForEntity(url, String.class);
+            ResponseEntity<String> responseEntity = restTemplate.getForEntity(ENDPOINT, String.class, apiKeyService.getRandomKey(ServiceType.DARKSKY), latitude, longitude);
             return handleWeatherResponse(latitude, longitude, responseEntity);
-        } catch(HttpClientErrorException e) {
+        } catch (HttpClientErrorException e) {
             logger.warning("Error retrieving Weather: " + e.getStatusCode() + " - " + e.getResponseBodyAsString());
             return getWeatherByLatLong(latitude, longitude);
         }
@@ -46,13 +45,13 @@ public class DarkSkyConsumer implements WeatherConsumer {
     private Weather handleWeatherResponse(String latitude, String longitude, ResponseEntity<String> responseEntity) {
         Map<String, Object> result = JsonFlattener.flattenAsMap(responseEntity.getBody());
 
-        Double tempC = ((Double.parseDouble(result.get("currently.temperature").toString()) - 32)*5)/9;
-        Double apparentTempC = ((Double.parseDouble(result.get("currently.apparentTemperature").toString()) - 32)*5)/9;
+        Double tempC = ((Double.parseDouble(result.get("currently.temperature").toString()) - 32) * 5) / 9;
+        Double apparentTempC = ((Double.parseDouble(result.get("currently.apparentTemperature").toString()) - 32) * 5) / 9;
 
         return new Weather()
                 .setLatitude(latitude)
                 .setLongitude(longitude)
-                .setLocation(locationConsumer.getWeatherByLatLong(latitude,longitude).getDescription())
+                .setLocation(locationConsumer.getWeatherByLatLong(latitude, longitude).getDescription())
                 .setSunrise(result.get("daily.data[0].sunriseTime").toString())
                 .setSunset(result.get("daily.data[0].sunsetTime").toString())
                 .setTemperatureC(tempC.toString())

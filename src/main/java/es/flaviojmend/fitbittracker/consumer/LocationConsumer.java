@@ -11,13 +11,15 @@ import java.util.Map;
 @Component
 public class LocationConsumer {
 
-    private static final String ENDPOINT = "https://nominatim.openstreetmap.org/reverse?lat=:lat&lon=:lon&format=json&accept-language=en-US";
+    private static final String ENDPOINT = "https://nominatim.openstreetmap.org/reverse?email=myemail@myserver.com&lat={latitude}&lon={longitude}&format=json&accept-language=en-US";
+
     private RestTemplate restTemplate = new RestTemplate();
 
     public Location getWeatherByLatLong(String latitude, String longitude) {
-        String url = ENDPOINT.replace(":lat", latitude).replace(":lon",longitude);
+
         try {
-            String object = restTemplate.getForObject(url, String.class);
+            String object = restTemplate.getForObject(ENDPOINT, String.class, latitude, longitude);
+
             Map<String, Object> result = JsonFlattener.flattenAsMap(object);
 
             return new Location().setLatitude(latitude)
