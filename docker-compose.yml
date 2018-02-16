@@ -5,22 +5,33 @@ services:
 
   db:
       image: mongo
+
       container_name: db
+
       ports:
             - '27017:27017'
+
       volumes:
         - "/data/mongodb:/data/db"
+
       restart: always
 
   tracker:
+
       depends_on:
         - db
-      image: es.flaviojmend/fitbit-tracker:1.0.0
+
+      image: fitbit-tracker
+
+      container_name: fitbit-tracker
+
       volumes:
         - "/etc/ssl/certs:/etc/ssl/certs:ro"
+
       links:
         - db
+
       ports:
-        - "80:8080"
         - "8443:8443"
+
       restart: always

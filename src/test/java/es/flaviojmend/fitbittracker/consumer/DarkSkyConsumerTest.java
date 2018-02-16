@@ -1,5 +1,7 @@
 package es.flaviojmend.fitbittracker.consumer;
 
+import es.flaviojmend.fitbittracker.TestAppConfiguration;
+import es.flaviojmend.fitbittracker.TestMainApplication;
 import es.flaviojmend.fitbittracker.persistence.entity.ApiKey;
 import es.flaviojmend.fitbittracker.persistence.entity.ServiceType;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
@@ -19,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.BDDMockito.given;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = {TestAppConfiguration.class, TestMainApplication.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class DarkSkyConsumerTest {
 
 
