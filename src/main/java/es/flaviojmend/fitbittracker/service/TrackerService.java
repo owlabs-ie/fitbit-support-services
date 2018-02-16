@@ -16,11 +16,11 @@ public class TrackerService {
     @Autowired
     private UserRepository userRepository;
 
-    public void updateUser(TrackingRequest trackingRequest) {
-        User user = userRepository.findOne(trackingRequest.getDeviceId());
+    public void saveOrUpdateUser(String userId) {
+        User user = userRepository.findOne(userId);
         if(user == null) {
             user = new User();
-            user.setUserId(trackingRequest.getDeviceId());
+            user.setUserId(userId);
             user.setDateCreated(new Date());
         }
         user.setDateLastAccessed(new Date());
@@ -34,6 +34,5 @@ public class TrackerService {
     public Long countUsers() {
         return userRepository.count();
     }
-
 
 }
