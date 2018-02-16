@@ -18,9 +18,19 @@ public class TrackerController {
         return trackerService.listUsers();
     }
 
+    @RequestMapping(method= RequestMethod.GET, value = "/{app}")
+    public Iterable<User> listUsersByApp(@PathVariable String app) {
+        return trackerService.listUsersByApp(app);
+    }
+
     @RequestMapping(method= RequestMethod.GET, value = "/count")
     public Long countUsers() {
         return trackerService.countUsers();
+    }
+
+    @RequestMapping(method= RequestMethod.GET, value = "/{app}/count")
+    public Long countUsersByApp(@PathVariable String app) {
+        return trackerService.countUsersByApp(app);
     }
 
 }

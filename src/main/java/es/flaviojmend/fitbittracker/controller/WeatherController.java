@@ -25,7 +25,7 @@ public class WeatherController {
     @RequestMapping(method= RequestMethod.GET, value = "/{service}/{latitude}/{longitude}")
     public ResponseEntity<?> getWeatherByLatLong(@PathVariable String service, @PathVariable String latitude, @PathVariable String longitude, @RequestParam("app") String app, @RequestParam(value = "uuid", required = false) String uuid){
         try {
-            trackerService.saveOrUpdateUser(uuid != null ? uuid : "unkn0wn");
+            trackerService.saveOrUpdateUser(uuid != null ? uuid : "unkn0wn", app != null ? app : "unkn0wn");
             return new ResponseEntity<Weather>(weatherService.getWeather(service, latitude, longitude, app), HttpStatus.OK);
         } catch (ExecutionException e) {
             return new ResponseEntity<Weather>(HttpStatus.NOT_ACCEPTABLE);
