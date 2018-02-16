@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fitbit-tracker.iml" filepath="$PROJECT_DIR$/.idea/modules/fitbit-tracker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fitbit-tracker_main.iml" filepath="$PROJECT_DIR$/.idea/modules/fitbit-tracker_main.iml" group="fitbit-tracker" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fitbit-tracker_test.iml" filepath="$PROJECT_DIR$/.idea/modules/fitbit-tracker_test.iml" group="fitbit-tracker" />
+      <module fileurl="file://$PROJECT_DIR$/fitbit-tracker.iml" filepath="$PROJECT_DIR$/fitbit-tracker.iml" />
     </modules>
   </component>
 </project>

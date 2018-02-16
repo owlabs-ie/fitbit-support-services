@@ -4,7 +4,6 @@ import es.flaviojmend.fitbittracker.persistence.entity.ApiKey;
 import es.flaviojmend.fitbittracker.persistence.entity.ServiceType;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
 import es.flaviojmend.fitbittracker.persistence.repo.ApiKeyRepository;
-import es.flaviojmend.fitbittracker.service.ApiKeyService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

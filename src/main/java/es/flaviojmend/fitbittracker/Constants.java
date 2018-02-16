@@ -5,6 +5,6 @@ public class Constants {
     /**
      * properties file
      */
-    public final static String Properties = "classpath:application.properties";
+//    public final static String Properties = "classpath:application.properties";
 
 }

@@ -19,7 +19,7 @@ import java.util.concurrent.Executor;
 
 @ComponentScan
 @EnableAutoConfiguration
-@PropertySource(Constants.Properties)
+//@PropertySource(Constants.Properties)
 @Configuration
 @EnableCaching
 @EnableAsync
