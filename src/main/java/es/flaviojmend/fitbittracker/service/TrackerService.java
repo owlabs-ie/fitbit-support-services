@@ -16,13 +16,14 @@ public class TrackerService {
     @Autowired
     private UserRepository userRepository;
 
-    public void updateUser(TrackingRequest trackingRequest) {
-        User user = userRepository.findOne(trackingRequest.getDeviceId());
+    public void saveOrUpdateUser(String userId, String app) {
+        User user = userRepository.findOne(userId);
         if(user == null) {
             user = new User();
-            user.setUserId(trackingRequest.getDeviceId());
+            user.setUserId(userId);
             user.setDateCreated(new Date());
         }
+        user.setApp(app);
         user.setDateLastAccessed(new Date());
         userRepository.save(user);
     }
@@ -31,9 +32,16 @@ public class TrackerService {
         return userRepository.findAll();
     }
 
+    public Iterable<User> listUsersByApp(String app) {
+        return userRepository.findAllByApp(app);
+    }
+
     public Long countUsers() {
         return userRepository.count();
     }
 
+    public Long countUsersByApp(String app) {
+        return new Long(userRepository.findAllByApp(app).size());
+    }
 
 }

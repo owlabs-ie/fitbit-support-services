@@ -10,9 +10,19 @@ public class User {
 
     @Id
     private String userId;
-
+    private String app;
     private Date dateCreated;
     private Date dateLastAccessed;
+
+
+    public String getApp() {
+        return app;
+    }
+
+    public User setApp(String app) {
+        this.app = app;
+        return this;
+    }
 
     public String getUserId() {
         return userId;
