@@ -10,7 +10,7 @@ services:
         - "/data/mongodb:/data/db"
       restart: always
       networks:
-        - default
+        - owlabs
 
   tracker:
 
@@ -30,9 +30,10 @@ services:
       networks:
         - owlabs
       environment:
-        - SPRING_CLOUD_CONFIG_URI=http://localhost:8888
+        - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
         - SPRING_CLOUD_CONFIG_ENABLED=true
         - SPRING_PROFILES_ACTIVE=prod
 
 networks:
   owlabs:
+    external: true
