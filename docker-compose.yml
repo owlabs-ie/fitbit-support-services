@@ -1,13 +1,11 @@
 version: '3'
 services:
 
-  # Java App with Mongo DB
-
   db:
       image: mongo
       container_name: db
       ports:
-            - '27017:27017'
+        - '27017:27017'
       volumes:
         - "/data/mongodb:/data/db"
       restart: always
@@ -29,7 +27,12 @@ services:
       ports:
         - 8445:8445
       restart: always
+      networks:
+        - owlabs
       environment:
-        - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+        - SPRING_CLOUD_CONFIG_URI=http://localhost:8888
         - SPRING_CLOUD_CONFIG_ENABLED=true
         - SPRING_PROFILES_ACTIVE=prod
+
+networks:
+  owlabs:
