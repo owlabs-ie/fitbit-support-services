@@ -12,7 +12,7 @@ node {
 
     //Build Project
     stage('Build') {
-        sh "./mvnw clean package -U"
+        sh "./mvnw clean package -DskipTests -U"
     }
 
     switch (env.BRANCH_NAME){
