@@ -12,7 +12,7 @@ node {
 
     //Build Project
     stage('Build') {
-        sh "./mvnw clean install"
+        sh "./mvnw clean package -U"
     }
 
     switch (env.BRANCH_NAME){
@@ -20,7 +20,7 @@ node {
       case "master":
 
         stage('Updating and running') {
-            sh "docker-compose up -d"
+            // sh "docker-compose up -d"
         }
 
         break;
