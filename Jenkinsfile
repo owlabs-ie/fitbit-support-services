@@ -12,7 +12,7 @@ node {
 
     switch (env.BRANCH_NAME){
 
-      case "master":
+      case "develop":
 
         //Build Project
         stage('Build') {
