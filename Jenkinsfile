@@ -10,17 +10,13 @@ node {
 
   try{
 
-    //Build Project
-    stage('Build') {
-        sh "./mvnw clean package -DskipTests -U"
-    }
-
     switch (env.BRANCH_NAME){
 
       case "master":
 
-        stage('Updating and running') {
-            // sh "docker-compose up -d"
+        //Build Project
+        stage('Build') {
+            sh "./mvnw clean package -DskipTests -U"
         }
 
         break;
