@@ -5,12 +5,18 @@ import es.flaviojmend.fitbittracker.persistence.entity.Location;
 import es.flaviojmend.fitbittracker.persistence.entity.ServiceType;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
 import es.flaviojmend.fitbittracker.service.ApiKeyService;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
+import javax.net.ssl.SSLContext;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -29,11 +35,30 @@ public class DarkSkyConsumer implements WeatherConsumer {
 
     private Logger logger = Logger.getLogger(this.toString());
 
+    public RestTemplate getRestTemplate() {
+        RestTemplate restTemplate = null;
+        SSLContext context = null;
+        try {
+            System.setProperty("https.protocols", "TLSv1");
+            context = SSLContext.getInstance("TLSv1");
+            context.init(null, null, null);
+        } catch (NoSuchAlgorithmException | KeyManagementException e) {
+            e.printStackTrace();
+        }
+        CloseableHttpClient httpClient = HttpClientBuilder
+                .create()
+                .setSSLContext(context)
+                .build();
+        HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory(httpClient);
+        restTemplate = new RestTemplate(factory);
+        return restTemplate;
+    }
+
     @Override
     public Weather getWeatherByLatLong(String latitude, String longitude) {
 
         try {
-            ResponseEntity<String> responseEntity = restTemplate.getForEntity(ENDPOINT, String.class, apiKeyService.getRandomKey(ServiceType.DARKSKY), latitude, longitude);
+            ResponseEntity<String> responseEntity = getRestTemplate().getForEntity(ENDPOINT, String.class, apiKeyService.getRandomKey(ServiceType.DARKSKY), latitude, longitude);
             return handleWeatherResponse(latitude, longitude, responseEntity);
         } catch (HttpClientErrorException e) {
             logger.warning("Error retrieving Weather: " + e.getStatusCode() + " - " + e.getResponseBodyAsString());
