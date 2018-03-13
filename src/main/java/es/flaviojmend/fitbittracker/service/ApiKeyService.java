@@ -22,7 +22,7 @@ public class ApiKeyService {
     public void addApiKeys(String apiKeys, String service) {
         for(String key:apiKeys.split(",")){
             ApiKey apiKey = new ApiKey();
-            apiKey.setKey(key);
+            apiKey.setKey(key.trim());
             apiKey.setService(ServiceType.valueOf(service));
             apiKeyRepository.save(apiKey);
         }

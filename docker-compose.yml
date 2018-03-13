@@ -1,23 +1,39 @@
 version: '3'
 services:
 
-  # Java App with Mongo DB
-
   db:
       image: mongo
+      container_name: db
+      ports:
+        - '27017:27017'
       volumes:
         - "/data/mongodb:/data/db"
       restart: always
+      networks:
+        - owlabs
 
   tracker:
-      depends_on:
-        - db
-      image: es.flaviojmend/fitbit-tracker:1.0.0
+
+      image: fitbit-tracker
+      container_name: fitbit-tracker
       volumes:
         - "/etc/ssl/certs:/etc/ssl/certs:ro"
       links:
         - db
+      external_links:
+        - config-server
+      depends_on:
+        - db
       ports:
-        - "80:8080"
-        - "8443:8443"
+        - 8443:8443
       restart: always
+      networks:
+        - owlabs
+      environment:
+        - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+        - SPRING_CLOUD_CONFIG_ENABLED=true
+        - SPRING_PROFILES_ACTIVE=prod
+
+networks:
+  owlabs:
+    external: true
