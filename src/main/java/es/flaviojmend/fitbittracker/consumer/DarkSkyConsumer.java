@@ -79,6 +79,7 @@ public class DarkSkyConsumer implements WeatherConsumer {
         return new Weather()
                 .setLatitude(latitude)
                 .setLongitude(longitude)
+                .setCondition(result.get("currently.summary").toString())
                 .setLocation(locationConsumer.getWeatherByLatLong(latitude, longitude).getDescription())
                 .setSunrise(result.get("daily.data[0].sunriseTime").toString())
                 .setSunset(result.get("daily.data[0].sunsetTime").toString())

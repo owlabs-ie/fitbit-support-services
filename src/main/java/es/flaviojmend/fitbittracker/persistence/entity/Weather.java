@@ -42,6 +42,18 @@ public class Weather {
     @Shortname("prc")
     private String precipitation;
 
+    @Shortname("con")
+    private String condition;
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public Weather setCondition(String condition) {
+        this.condition = condition;
+        return this;
+    }
+
     public String getHumidity() {
         return humidity;
     }

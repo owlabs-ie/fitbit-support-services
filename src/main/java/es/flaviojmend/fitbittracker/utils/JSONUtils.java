@@ -14,11 +14,17 @@ public class JSONUtils {
 
     public static String retrieveFieldsFromWeatherObject(String fields, Weather weather) throws JsonProcessingException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         ObjectMapper mapper = new ObjectMapper();
+        JSONObject json = new JSONObject();
+
         if(fields == null) {
-            return mapper.writeValueAsString(weather);
+            for(Field decField : weather.getClass().getDeclaredFields()) {
+                for(Shortname shortname : decField.getAnnotationsByType(Shortname.class)) {
+                    json.put(Shortname.class.getMethod("value").invoke(shortname).toString(), weather.getClass().getMethod("get"+StringUtils.capitalize(decField.getName())).invoke(weather));
+                }
+            }
+            return json.toString();
         }
 
-        JSONObject json = new JSONObject();
         for(String field : fields.split(",")) {
             for(Field decField : weather.getClass().getDeclaredFields()) {
                 for(Shortname shortname : decField.getAnnotationsByType(Shortname.class)) {
@@ -27,8 +33,6 @@ public class JSONUtils {
                     }
                 }
             }
-
-
         }
 
         return json.toString();
