@@ -1,8 +1,10 @@
 package es.flaviojmend.fitbittracker.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import es.flaviojmend.fitbittracker.consumer.DarkSkyConsumer;
 import es.flaviojmend.fitbittracker.consumer.OpenWeatherConsumer;
+import es.flaviojmend.fitbittracker.enums.Version;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
 
 import es.flaviojmend.fitbittracker.utils.JSONUtils;
@@ -13,7 +15,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.concurrent.ExecutionException;
 
 @Service
 public class WeatherService {
@@ -30,8 +31,8 @@ public class WeatherService {
     @Autowired
     private WeatherRequestService weatherRequestService;
 
-    @Cacheable(value = "weather", key = "{#service, #latitude, #longitude, #fields}")
-    public String getWeather(String service, String latitude, String longitude, String app, String fields) throws IllegalAccessException, JsonProcessingException, NoSuchMethodException, InvocationTargetException {
+    @Cacheable(value = "weather", key = "{#service, #latitude, #longitude, #version, #fields}")
+    public String getWeather(String service, String latitude, String longitude, String app, String fields, Version version) throws IllegalAccessException, JsonProcessingException, NoSuchMethodException, InvocationTargetException {
         weatherRequestService.saveRequest(service,latitude,longitude,app);
         logger.info("Retrieving " + service);
 
@@ -52,8 +53,11 @@ public class WeatherService {
 
         }
 
-
-        return JSONUtils.retrieveFieldsFromWeatherObject(fields, weatherResponse);
+        if(version == Version.V2) {
+            return JSONUtils.retrieveFieldsFromWeatherObject(fields, weatherResponse);
+        } else {
+            return new ObjectMapper().writeValueAsString(weatherResponse);
+        }
     }
 
 

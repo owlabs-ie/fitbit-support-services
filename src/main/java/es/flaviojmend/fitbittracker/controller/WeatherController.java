@@ -1,6 +1,7 @@
 package es.flaviojmend.fitbittracker.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import es.flaviojmend.fitbittracker.enums.Version;
 import es.flaviojmend.fitbittracker.persistence.entity.Weather;
 import es.flaviojmend.fitbittracker.service.TrackerService;
 import es.flaviojmend.fitbittracker.service.WeatherService;
@@ -28,7 +29,7 @@ public class WeatherController {
     public ResponseEntity<?> getWeatherByLatLong(@PathVariable String service, @PathVariable String latitude, @PathVariable String longitude, @RequestParam("app") String app, @RequestParam(value = "uuid", required = false) String uuid){
         try {
             trackerService.saveOrUpdateUser(uuid != null ? uuid : "unkn0wn", app != null ? app : "unkn0wn");
-            return new ResponseEntity<>(weatherService.getWeather(service, latitude, longitude, app, null), HttpStatus.OK);
+            return new ResponseEntity<>(weatherService.getWeather(service, latitude, longitude, app, null, Version.V1), HttpStatus.OK);
         } catch (JsonProcessingException e) {
             return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
         } catch (InvocationTargetException e) {
