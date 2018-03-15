@@ -19,7 +19,7 @@ import java.util.stream.StreamSupport;
 @Service
 public class TrackerService {
 
-    DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+    DateFormat df = new SimpleDateFormat("yyyyMMddHHmm");
 
     @Autowired
     private UserRepository userRepository;
