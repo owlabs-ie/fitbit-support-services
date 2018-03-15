@@ -14,23 +14,23 @@ public class TrackerController {
     TrackerService trackerService;
 
     @RequestMapping(method= RequestMethod.GET)
-    public Iterable<User> listUsers() {
-        return trackerService.listUsers();
+    public Iterable<User> listUsers(@RequestParam(value="from", required = false) String from, @RequestParam(value="to", required = false) String to) {
+        return trackerService.listUsers(from,to);
     }
 
     @RequestMapping(method= RequestMethod.GET, value = "/{app}")
-    public Iterable<User> listUsersByApp(@PathVariable String app) {
-        return trackerService.listUsersByApp(app);
+    public Iterable<User> listUsersByApp(@PathVariable String app,@RequestParam(value="from", required = false) String from, @RequestParam(value="to", required = false) String to) {
+        return trackerService.listUsersByApp(app,from,to);
     }
 
     @RequestMapping(method= RequestMethod.GET, value = "/count")
-    public Long countUsers() {
-        return trackerService.countUsers();
+    public Long countUsers(@RequestParam(value="from", required = false) String from, @RequestParam(value="to", required = false) String to) {
+        return trackerService.countUsers(from, to);
     }
 
     @RequestMapping(method= RequestMethod.GET, value = "/{app}/count")
-    public Long countUsersByApp(@PathVariable String app) {
-        return trackerService.countUsersByApp(app);
+    public Long countUsersByApp(@PathVariable String app,@RequestParam(value="from", required = false) String from, @RequestParam(value="to", required = false) String to) {
+        return trackerService.countUsersByApp(app,from,to);
     }
 
 }
