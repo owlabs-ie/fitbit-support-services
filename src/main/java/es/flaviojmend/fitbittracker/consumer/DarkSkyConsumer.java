@@ -65,9 +65,10 @@ public class DarkSkyConsumer implements WeatherConsumer {
             return handleWeatherResponse(latitude, longitude, responseEntity);
         } catch (Exception e) {
             logger.warning("Error retrieving Weather: " + e.getCause());
-            return getWeatherByLatLong(latitude, longitude);
+//            return getWeatherByLatLong(latitude, longitude);
         }
 
+        return null;
     }
 
     private Weather handleWeatherResponse(String latitude, String longitude, ResponseEntity<String> responseEntity) {

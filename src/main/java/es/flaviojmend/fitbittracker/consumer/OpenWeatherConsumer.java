@@ -38,8 +38,8 @@ public class OpenWeatherConsumer implements WeatherConsumer {
         } catch (HttpClientErrorException e) {
 
             logger.warning("Error retrieving Weather: " + e.getStatusCode() + " - " + e.getResponseBodyAsString());
-            return getWeatherByLatLong(latitude, longitude);
-
+//            return getWeatherByLatLong(latitude, longitude);
+            return null;
         }
 
     }
