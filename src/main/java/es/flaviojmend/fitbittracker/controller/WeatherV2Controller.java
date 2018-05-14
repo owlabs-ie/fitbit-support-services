@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.lang.reflect.InvocationTargetException;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/v2/weather")
 public class WeatherV2Controller {
 
