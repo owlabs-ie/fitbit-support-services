@@ -53,6 +53,10 @@ public class WeatherService {
 
         }
 
+        if (weatherResponse == null){
+            return "";
+        }
+
         if(version == Version.V2) {
             return JSONUtils.retrieveFieldsFromWeatherObject(fields, weatherResponse);
         } else {
