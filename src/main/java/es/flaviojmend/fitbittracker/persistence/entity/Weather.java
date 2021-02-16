@@ -1,23 +1,58 @@
 package es.flaviojmend.fitbittracker.persistence.entity;
 
+import es.flaviojmend.fitbittracker.persistence.entity.annotations.Shortname;
 import org.springframework.data.annotation.Id;
 
 public class Weather {
 
     @Id
+    @Shortname("id")
     private String id;
 
+    @Shortname("lat")
     private String latitude;
+
+    @Shortname("lon")
     private String longitude;
+
+    @Shortname("tpC")
     private String temperatureC;
+
+    @Shortname("apC")
     private String apparentTemperatureC;
+
+    @Shortname("tpF")
     private String temperatureF;
+
+    @Shortname("apF")
     private String apparentTemperatureF;
+
+    @Shortname("loc")
     private String location;
+
+    @Shortname("sri")
     private String sunrise;
+
+    @Shortname("sse")
     private String sunset;
+
+    @Shortname("hum")
     private String humidity;
+
+    @Shortname("prc")
     private String precipitation;
+
+    @Shortname("con")
+    private String condition;
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public Weather setCondition(String condition) {
+        this.condition = condition;
+        return this;
+    }
 
     public String getHumidity() {
         return humidity;

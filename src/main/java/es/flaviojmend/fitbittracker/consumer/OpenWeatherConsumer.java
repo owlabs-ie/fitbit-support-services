@@ -38,8 +38,8 @@ public class OpenWeatherConsumer implements WeatherConsumer {
         } catch (HttpClientErrorException e) {
 
             logger.warning("Error retrieving Weather: " + e.getStatusCode() + " - " + e.getResponseBodyAsString());
-            return getWeatherByLatLong(latitude, longitude);
-
+//            return getWeatherByLatLong(latitude, longitude);
+            return null;
         }
 
     }
@@ -52,6 +52,7 @@ public class OpenWeatherConsumer implements WeatherConsumer {
         return new Weather()
                 .setLatitude(latitude)
                 .setLongitude(longitude)
+                .setCondition(result.get("weather[0].main").toString())
                 .setLocation(result.get("name").toString())
                 .setSunrise(result.get("sys.sunrise").toString())
                 .setSunset(result.get("sys.sunset").toString())

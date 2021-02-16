@@ -65,9 +65,10 @@ public class DarkSkyConsumer implements WeatherConsumer {
             return handleWeatherResponse(latitude, longitude, responseEntity);
         } catch (Exception e) {
             logger.warning("Error retrieving Weather: " + e.getCause());
-            return getWeatherByLatLong(latitude, longitude);
+//            return getWeatherByLatLong(latitude, longitude);
         }
 
+        return null;
     }
 
     private Weather handleWeatherResponse(String latitude, String longitude, ResponseEntity<String> responseEntity) {
@@ -79,11 +80,12 @@ public class DarkSkyConsumer implements WeatherConsumer {
         return new Weather()
                 .setLatitude(latitude)
                 .setLongitude(longitude)
+                .setCondition(result.get("currently.summary").toString())
                 .setLocation(locationConsumer.getWeatherByLatLong(latitude, longitude).getDescription())
                 .setSunrise(result.get("daily.data[0].sunriseTime").toString())
                 .setSunset(result.get("daily.data[0].sunsetTime").toString())
-                .setTemperatureC(tempC.toString())
-                .setApparentTemperatureC(apparentTempC.toString())
+                .setTemperatureC(String.format("%.1f", tempC))
+                .setApparentTemperatureC(String.format("%.1f", apparentTempC))
                 .setTemperatureF(result.get("currently.temperature").toString())
                 .setApparentTemperatureF(result.get("currently.apparentTemperature").toString())
                 .setHumidity(result.get("currently.humidity").toString())
